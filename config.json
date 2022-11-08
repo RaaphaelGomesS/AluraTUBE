@@ -2,6 +2,25 @@
   "name": "Raphael Gomes",
   "job": "Web developer",
   "github": "RaaphaelGomesS",
+  "seguindo": [
+    {
+      "nome": "Jovem Nerd",
+      "imagem": "https://yt3.ggpht.com/ytc/AMLnZu9pDOp93R9V0cp_CodoiMk8FM60-46FkdDasQ1i=s88-c-k-c0x00ffffff-no-rj",
+      "url": "https://www.youtube.com/c/JovemNerd"
+    },
+    {
+      "nome": "MRG",
+      "imagem": "https://yt3.ggpht.com/ytc/AMLnZu_oJLARWvLutr9pQtuzBqMhOpv5cQVTLUjXg4-R=s88-c-k-c0x00ffffff-no-rj",
+      "url": "https://www.youtube.com/user/matandorobosgigantes"
+    },
+    {
+      "nome": "Alura",
+      "imagem": "https://yt3.ggpht.com/xqhIoXspeX7eqouJvNHl1xqpv9213Pl26ENZbuouXxO2RlDadjsveNXfgnj8GTUk7thFYUkVRg=s88-c-k-c0x00ffffff-no-rj",
+      "url": "https://www.youtube.com/c/Alura"
+    }
+  ],
+     
+
   "playlists": {
     "jogos": [
       {

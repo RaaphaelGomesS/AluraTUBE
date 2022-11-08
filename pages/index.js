@@ -2,6 +2,7 @@ import config from "../config.json";
 import { CSSReset } from "../src/components/cssrest/CSSReset";
 import Header from "../src/components/header/Header";
 import Menu from "../src/components/menu/Menu";
+import Rodape from "../src/components/rodape/rodape";
 import Timeline from "../src/components/timeline/Timeline";
 
 function HomePage() {
@@ -20,6 +21,7 @@ function HomePage() {
           <Header />
           <Timeline playlists={config.playlists} />
         </main>
+        <Rodape seguindo={config.seguindo} />
       </div>
     </>
   );
