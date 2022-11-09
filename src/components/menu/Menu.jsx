@@ -1,11 +1,13 @@
+import Search from "./components/search.jsx";
 import StyledMenu from "./CSSmenu.js"
 
-function Menu(){
+function Menu({ valorDoFiltro, setValorDoFiltro }){
   return (
     <StyledMenu>
       <div>
         <Logo />
       </div>
+      <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>
     </StyledMenu>
   );
 }
