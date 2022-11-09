@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 const StyledRodape = styled.div`
   img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
   }
 
   .container{
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
+    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -18,7 +18,19 @@ const StyledRodape = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20%;
+    flex-wrap: wrap;
+    width: 20px;
+    text-align: center;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-bottom: 2vh;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
   }
 `;
 
@@ -27,6 +39,7 @@ function Rodape(props) {
   console.log(contasSeguidas);
   return (
     <StyledRodape>
+        <h2>Favoritos</h2>
         <div className="container">
       {contasSeguidas.map((conta) => {
         return (
