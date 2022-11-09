@@ -1,6 +1,6 @@
 import StyledTimeline from "./CSSTimeline";
 
-function Timeline(props) {
+function Timeline({ searchValue, ...props }) {
   console.log(props.playlists);
   const playlisNames = Object.keys(props.playlists);
   return (
@@ -11,14 +11,20 @@ function Timeline(props) {
           <section>
             <h2>{playlisName}</h2>
             <div>
-              {videos.map((video) => {
-                return (
-                  <a href={video.url}>
-                    <img src={video.thumb} />
-                    <span>{video.title}</span>
-                  </a>
-                );
-              })}
+              {videos
+                .filter((video) => {
+                  const titleNormalized = video.title.toLowerCase();
+                  const searchValueNormalized = searchValue.toLowerCase();
+                  return titleNormalized.includes(searchValueNormalized);
+                })
+                .map((video) => {
+                  return (
+                    <a href={video.url}>
+                      <img src={video.thumb} />
+                      <span>{video.title}</span>
+                    </a>
+                  );
+                })}
             </div>
           </section>
         );
