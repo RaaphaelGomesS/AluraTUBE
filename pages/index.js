@@ -1,11 +1,15 @@
+import react from "react";
 import config from "../config.json";
-import { CSSReset } from "../src/components/cssrest/CSSReset";
+import { CSSReset } from "../CSSReset";
 import Header from "../src/components/header/Header";
 import Menu from "../src/components/menu/Menu";
 import Rodape from "../src/components/rodape/rodape";
 import Timeline from "../src/components/timeline/Timeline";
 
 function HomePage() {
+
+  const [valorDoFiltro, setValorDoFiltro] = react.useState("");
+
   return (
     <>
       <CSSReset />
@@ -16,10 +20,10 @@ function HomePage() {
           flex: 1,
         }}
       >
-        <Menu />
+        <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>
         <main style={{ display: "flex", flexDirection: "column", flex: 1 }}>
           <Header />
-          <Timeline playlists={config.playlists} />
+          <Timeline searchValue={valorDoFiltro} playlists={config.playlists} />
         </main>
         <Rodape seguindo={config.seguindo} />
       </div>
