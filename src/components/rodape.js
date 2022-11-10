@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import config from "../../config.json"
 
 const StyledRodape = styled.div`
   img {
@@ -9,9 +10,11 @@ const StyledRodape = styled.div`
 
   .container{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
     width: 100%;
+    grid-gap: 15vh;
+    margin-left: 30px;
   }
 
   .follow {
@@ -21,9 +24,6 @@ const StyledRodape = styled.div`
     flex-wrap: wrap;
     width: 20px;
     text-align: center;
-    margin-left: 10vh;
-    margin-right: 10vh;
-    margin-bottom: 2vh;
   }
 
   h2 {
@@ -32,18 +32,24 @@ const StyledRodape = styled.div`
     margin-bottom: 10px;
     text-transform: capitalize;
   }
+  a {
+        scroll-snap-align: start;
+        span {
+          padding-top: 8px;
+          color: ${({ theme }) => theme.textColorBase || "#222222"};
+        }
+      }
 `;
 
 function Rodape(props) {
   const contasSeguidas = Object(props.seguindo);
-  console.log(contasSeguidas);
   return (
     <StyledRodape>
         <h2>Favoritos</h2>
         <div className="container">
-      {contasSeguidas.map((conta) => {
+      {contasSeguidas.map((conta, index) => {
         return (
-            <a href={conta.url} className="follow">
+            <a key={index} href={conta.url} className="follow">
               <img src={conta.imagem}></img>
               <span>{conta.nome}</span>
             </a>

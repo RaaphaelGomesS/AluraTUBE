@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import react from "react";
+import React from "react";
+import styled from "styled-components"
 
 const StyledSearch = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ const StyledSearch = styled.div`
   width: 100%;
   border-radius: 2px;
   overflow: hidden;
-
+  
   input {
     width: 80%;
     padding: 4px 6px;
@@ -34,18 +34,16 @@ const StyledSearch = styled.div`
   }
 `;
 
-function Search({ valorDoFiltro, setValorDoFiltro }) {
+export default function Search({ valorDoFiltro, setValorDoFiltro }) {
+    const valorDaBusca = valorDoFiltro;
+    const setValorDaBusca = setValorDoFiltro;
 
-  const valorDaBusca = valorDoFiltro;
-  const setValorDaBusca = setValorDoFiltro;
-
-  return (
-    <StyledSearch>
-      <input placeholder="Pesquisar" type="text" onChange={(e) => {setValorDaBusca(e.target.value);}} 
-      value={valorDaBusca}/>
-      <button>🔎</button>
-    </StyledSearch>
-  );
+    return (
+        <StyledSearch>
+            <input type="text" onChange={(e) => setValorDaBusca(e.target.value)} value={valorDaBusca} />
+            <button>
+                🔎
+            </button>
+        </StyledSearch>
+    )
 }
-
-export default Search;
