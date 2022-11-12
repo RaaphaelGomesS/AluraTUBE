@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import config from "../../config.json"
 
 const StyledRodape = styled.div`
   img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
   }
 
@@ -12,9 +11,9 @@ const StyledRodape = styled.div`
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
     grid-gap: 15vh;
-    margin-left: 30px;
+    margin: 10px;
   }
 
   .follow {
@@ -24,6 +23,7 @@ const StyledRodape = styled.div`
     flex-wrap: wrap;
     width: 20px;
     text-align: center;
+    padding-left: 20px;
   }
 
   h2 {
